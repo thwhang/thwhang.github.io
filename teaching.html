@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching | Taehee Whang</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a class="site-name" href="index.html">Taehee Whang</a>
+    <nav>
+      <a href="index.html" data-en="Home" data-ko="홈">Home</a>
+      <a href="research.html" data-en="Research" data-ko="연구">Research</a>
+      <a href="teaching.html" class="active" data-en="Teaching" data-ko="강의">Teaching</a>
+      <a href="cv.html" data-en="CV" data-ko="CV">CV</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ko">KO</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1 data-en="Teaching" data-ko="강의">Teaching</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div id="teaching-content"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Taehee Whang &nbsp;|&nbsp; Yonsei University &nbsp;|&nbsp;
+       <a href="mailto:thwhang@yonsei.ac.kr">thwhang@yonsei.ac.kr</a></p>
+    <p style="margin-top:0.4rem;">&copy; <span id="year"></span> Taehee Whang.</p>
+  </div>
+</footer>
+
+<script src="data/content.js"></script>
+<script src="js/lang.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function renderTeaching() {
+    const c = content[currentLang];
+    if (!c.teaching.courses || c.teaching.courses.length === 0) {
+      document.getElementById('teaching-content').innerHTML =
+        `<p style="color:var(--muted); font-style:italic; padding:2rem 0;">${c.teaching.placeholder}</p>`;
+      return;
+    }
+    document.getElementById('teaching-content').innerHTML = c.teaching.courses.map(group => `
+      <div class="course-group">
+        <div class="course-level">${group.level}</div>
+        <ul class="course-list">
+          ${group.list.map(course => `<li>${course}</li>`).join('')}
+        </ul>
+      </div>`).join('');
+  }
+</script>
+</body>
+</html>

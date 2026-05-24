@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taehee Whang | 황태희</title>
+  <meta name="description" content="Taehee Whang — Associate Professor, Yonsei University. Research in economic sanctions, international development, and North Korea." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <a class="site-name" href="index.html">Taehee Whang</a>
+    <nav>
+      <a href="index.html" class="active"
+         data-en="Home" data-ko="홈">Home</a>
+      <a href="research.html"
+         data-en="Research" data-ko="연구">Research</a>
+      <a href="teaching.html"
+         data-en="Teaching" data-ko="강의">Teaching</a>
+      <a href="cv.html"
+         data-en="CV" data-ko="CV">CV</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ko">KO</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <img class="hero-photo"
+         src="https://fis.yonsei.ac.kr/profileImg/thumb_faba724e2a441b94d15f805f0c31ef0d.png"
+         alt="Taehee Whang"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+    <div class="hero-photo-placeholder" style="display:none;">👤</div>
+    <h1 data-en="Taehee Whang" data-ko="황태희">Taehee Whang</h1>
+    <p class="name-sub" data-en="황태희" data-ko="Taehee Whang">황태희</p>
+    <p class="position"
+       data-en="Professor &amp; Associate Dean, College of Social Science"
+       data-ko="교수 · 사회과학대학 부학장">Professor &amp; Associate Dean, College of Social Science</p>
+    <p class="university"
+       data-en="Department of Political Science and Diplomacy, Yonsei University"
+       data-ko="연세대학교 정치외교학과">Department of Political Science and Diplomacy, Yonsei University</p>
+    <p class="tagline"
+       data-en="International Relations · Economic Sanctions · Research Methods · North Korea"
+       data-ko="국제관계론 · 경제제재 · 연구방법론 · 북한">
+       International Relations · Economic Sanctions · Research Methods · North Korea
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 data-en="About" data-ko="소개">About</h2>
+    <div class="about-text">
+      <p data-en="I am a Professor in the Department of Political Science and Diplomacy at Yonsei University. My research focuses on international political economy, with particular interests in economic sanctions, international development and foreign aid, human rights, and North Korea. I also work on research methodology, including structural estimation, maximum likelihood estimation, game theory, and automated text analysis."
+         data-ko="연세대학교 정치외교학과 교수입니다. 주요 연구 분야는 국제정치경제로, 경제제재, 국제개발과 대외원조, 인권, 그리고 북한 문제에 집중합니다. 연구방법론 측면에서는 구조적 추정, 최대우도법, 게임이론, 자동화 텍스트 분석 등을 활용합니다.">
+        I am a Professor in the Department of Political Science and Diplomacy at Yonsei University. My research focuses on international political economy, with particular interests in economic sanctions, international development and foreign aid, human rights, and North Korea. I also work on research methodology, including structural estimation, maximum likelihood estimation, game theory, and automated text analysis.
+      </p>
+      <p data-en="I received my Ph.D. in Political Science from the University of Rochester in 2007. Prior to Yonsei, I held positions at Korea University and Texas A&amp;M University (2007–2012)."
+         data-ko="2007년 로체스터대학교에서 정치학 박사학위를 취득하였습니다. 연세대 부임 전에는 고려대학교와 텍사스A&amp;M 대학교(2007–2012)에서 교수직을 역임하였습니다.">
+        I received my Ph.D. in Political Science from the University of Rochester in 2007. Prior to Yonsei, I held positions at Korea University and Texas A&amp;M University (2007–2012).
+      </p>
+    </div>
+    <p class="contact-line">
+      <span data-en="Contact:" data-ko="연락처:">Contact:</span>
+      <a href="mailto:thwhang@yonsei.ac.kr">thwhang@yonsei.ac.kr</a>
+    </p>
+  </div>
+</section>
+
+<!-- RECENT PUBLICATIONS (preview) -->
+<section id="publications-preview">
+  <div class="container">
+    <h2 data-en="Recent Publications" data-ko="최근 논문">Recent Publications</h2>
+    <ul class="pub-list" id="recent-pubs"></ul>
+    <p style="margin-top:1.2rem; font-size:0.9rem;">
+      <a href="research.html" style="color:var(--accent);"
+         data-en="→ View all publications"
+         data-ko="→ 전체 논문 보기">→ View all publications</a>
+    </p>
+  </div>
+</section>
+
+<!-- RESEARCH AREAS (brief) -->
+<section id="interests">
+  <div class="container">
+    <h2 data-en="Research Areas" data-ko="연구 분야">Research Areas</h2>
+    <div class="research-areas" id="area-cards"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>Taehee Whang &nbsp;|&nbsp; Yonsei University &nbsp;|&nbsp;
+       <a href="mailto:thwhang@yonsei.ac.kr">thwhang@yonsei.ac.kr</a></p>
+    <p style="margin-top:0.4rem;">
+      &copy; <span id="year"></span> Taehee Whang. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script src="data/publications.js"></script>
+<script src="data/content.js"></script>
+<script src="js/lang.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function renderPublications() {
+    const c = content[currentLang];
+    const recent = publications
+      .filter(p => p.type === 'article')
+      .sort((a, b) => b.year - a.year)
+      .slice(0, 4);
+
+    document.getElementById('recent-pubs').innerHTML = recent.map(p => `
+      <li class="pub-item">
+        <span class="pub-year">${p.year}</span>
+        <div class="pub-body">
+          <div class="pub-title">${p.title}</div>
+          <div class="pub-authors">${p.authors}</div>
+          <div class="pub-venue"><em>${p.journal}</em>${p.volume ? ' ' + p.volume : ''}${p.pages ? ':' + p.pages : ''}</div>
+        </div>
+      </li>`).join('');
+  }
+
+  function renderResearch() {
+    const c = content[currentLang];
+    document.getElementById('area-cards').innerHTML = c.research.areas.map(a => `
+      <div class="area-card">
+        <h3>${a.title}</h3>
+        <p>${a.desc}</p>
+      </div>`).join('');
+  }
+</script>
+</body>
+</html>

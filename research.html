@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Taehee Whang</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a class="site-name" href="index.html">Taehee Whang</a>
+    <nav>
+      <a href="index.html" data-en="Home" data-ko="홈">Home</a>
+      <a href="research.html" class="active" data-en="Research" data-ko="연구">Research</a>
+      <a href="teaching.html" data-en="Teaching" data-ko="강의">Teaching</a>
+      <a href="cv.html" data-en="CV" data-ko="CV">CV</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ko">KO</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1 data-en="Research" data-ko="연구">Research</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <p id="research-intro" style="margin-bottom:1.5rem; color:var(--muted);"></p>
+    <div class="research-areas" id="area-cards"></div>
+  </div>
+</section>
+
+<section style="background:var(--light-gray);">
+  <div class="container">
+    <h2 id="pub-heading">Publications</h2>
+
+    <div class="pub-filters" id="pub-filters"></div>
+
+    <ul class="pub-list" id="pub-list"></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Taehee Whang &nbsp;|&nbsp; Yonsei University &nbsp;|&nbsp;
+       <a href="mailto:thwhang@yonsei.ac.kr">thwhang@yonsei.ac.kr</a></p>
+    <p style="margin-top:0.4rem;">&copy; <span id="year"></span> Taehee Whang.</p>
+  </div>
+</footer>
+
+<script src="data/publications.js"></script>
+<script src="data/content.js"></script>
+<script src="js/lang.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  let activeFilter = 'all';
+
+  function renderPublications() {
+    const c = content[currentLang];
+    document.getElementById('pub-heading').textContent = c.research.pubHeading;
+    document.getElementById('research-intro').textContent = c.research.intro;
+
+    document.getElementById('pub-filters').innerHTML = [
+      { key: 'all', label: c.research.filterAll },
+      { key: 'article', label: c.research.filterArticle },
+      { key: 'korean', label: c.research.filterKorean },
+      { key: 'working', label: c.research.filterWorking }
+    ].map(f => `
+      <button class="filter-btn ${activeFilter === f.key ? 'active' : ''}"
+              onclick="setFilter('${f.key}')">${f.label}</button>
+    `).join('');
+
+    const filtered = publications
+      .filter(p => activeFilter === 'all' || p.type === activeFilter)
+      .sort((a, b) => b.year - a.year);
+
+    document.getElementById('pub-list').innerHTML = filtered.map(p => `
+      <li class="pub-item">
+        <span class="pub-year">${p.year}</span>
+        <div class="pub-body">
+          <div class="pub-title">
+            ${p.title}
+            ${p.type === 'working' ? '<span class="pub-badge badge-working">Working Paper</span>' : ''}
+            ${p.type === 'korean' ? '<span class="pub-badge badge-korean">KCI</span>' : ''}
+          </div>
+          <div class="pub-authors">${p.authors}</div>
+          <div class="pub-venue"><em>${p.journal}</em>${p.volume ? ' ' + p.volume : ''}${p.pages ? ':' + p.pages : ''}</div>
+          ${p.pdf ? `<div class="pub-links"><a class="pub-link" href="${p.pdf}" target="_blank">PDF</a></div>` : ''}
+        </div>
+      </li>`).join('');
+  }
+
+  function setFilter(key) {
+    activeFilter = key;
+    renderPublications();
+  }
+
+  function renderResearch() {
+    const c = content[currentLang];
+    document.getElementById('area-cards').innerHTML = c.research.areas.map(a => `
+      <div class="area-card">
+        <h3>${a.title}</h3>
+        <p>${a.desc}</p>
+      </div>`).join('');
+  }
+</script>
+</body>
+</html>
