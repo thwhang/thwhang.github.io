@@ -13,15 +13,14 @@ const content = {
       cv: "CV"
     },
     hero: {
-      tagline: "International Relations · Economic Sanctions · Research Methods · North Korea"
+      tagline: "International Relations · Economic Sanctions · North Korea and Unification · Research Methods"
     },
     about: {
       heading: "About",
       bio: `I am a Professor in the Department of Political Science and International Studies at Yonsei University.
-      My research focuses on international political economy, with particular interests in economic sanctions,
+      My research focuses on international politics, with particular interests in economic sanctions,
       international development and foreign aid, human rights, and North Korea.
-      I also work on research methodology, including structural estimation, maximum likelihood estimation,
-      game theory, and automated text analysis.`,
+`,
       bio2: `I received my M.A. in Politics from New York University in 2001 and my Ph.D. in Political Science from the University of Rochester in 2007.
       Prior to Yonsei, I held positions at Korea University and Texas A&amp;M University (2007–2012).
       From January 2024 to June 2025, I served as Director-General of the Unification Cooperation Bureau at the Ministry of Unification, Republic of Korea, while on leave from Yonsei University.`
