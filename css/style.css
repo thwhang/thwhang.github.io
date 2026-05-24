@@ -32,7 +32,7 @@ body {
 
 section { padding: 3.5rem 0; }
 
-section:nth-child(even) { background: var(--light-gray); }
+section:nth-child(even):not(.hero) { background: var(--light-gray); }
 
 /* ===== HEADER / NAV ===== */
 header {

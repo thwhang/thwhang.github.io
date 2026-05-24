@@ -2,8 +2,8 @@ const content = {
   en: {
     name: "Taehee Whang",
     nameKo: "황태희",
-    title: "Professor & Associate Dean, College of Social Science",
-    department: "Department of Political Science and Diplomacy",
+    title: "Professor",
+    department: "Department of Political Science and International Studies",
     university: "Yonsei University",
     email: "thwhang@yonsei.ac.kr",
     nav: {
@@ -17,21 +17,22 @@ const content = {
     },
     about: {
       heading: "About",
-      bio: `I am a Professor in the Department of Political Science and Diplomacy at Yonsei University.
+      bio: `I am a Professor in the Department of Political Science and International Studies at Yonsei University.
       My research focuses on international political economy, with particular interests in economic sanctions,
       international development and foreign aid, human rights, and North Korea.
       I also work on research methodology, including structural estimation, maximum likelihood estimation,
       game theory, and automated text analysis.`,
-      bio2: `I received my Ph.D. in Political Science from the University of Rochester in 2007.
-      Prior to Yonsei, I held positions at Korea University and Texas A&amp;M University (2007–2012).`
+      bio2: `I received my M.A. in Politics from New York University in 2001 and my Ph.D. in Political Science from the University of Rochester in 2007.
+      Prior to Yonsei, I held positions at Korea University and Texas A&amp;M University (2007–2012).
+      From January 2024 to June 2025, I served as Director-General of the Unification Cooperation Bureau at the Ministry of Unification, Republic of Korea, while on leave from Yonsei University.`
     },
     research: {
       heading: "Research",
-      intro: "My research spans three broad areas:",
+      intro: "My research spans the following areas:",
       areas: [
         {
-          title: "Economic Sanctions",
-          desc: "Structural and strategic analysis of sanctions initiation, outcomes, domestic politics of sanctions, and coercive bargaining."
+          title: "International Relations & Economic Sanctions",
+          desc: "Structural and strategic analysis of sanctions initiation, outcomes, domestic politics of sanctions, coercive bargaining, and audience costs."
         },
         {
           title: "International Development & Foreign Aid",
@@ -57,11 +58,13 @@ const content = {
       heading: "Curriculum Vitae",
       download: "Download CV (PDF)",
       positions: [
-        { period: "2018–present", role: "Professor", place: "Yonsei University, Department of Political Science and Diplomacy" },
-        { period: "2018–present", role: "Associate Dean, College of Social Science", place: "Yonsei University" },
-        { period: "2016–2018", role: "Chair, Department of Political Science and Diplomacy", place: "Yonsei University" },
-        { period: "2015–2018", role: "Associate Professor", place: "Yonsei University, Department of Political Science and Diplomacy" },
-        { period: "2014–2015", role: "Associate Professor", place: "Korea University, Department of Political Science and International Relations" },
+        { period: "2018–present", role: "Professor", place: "Yonsei University, Department of Political Science and International Studies" },
+        { period: "2024–2025", role: "Director-General, Unification Cooperation Bureau", place: "Ministry of Unification, Republic of Korea" },
+        { period: "2018–2020", role: "Associate Dean, College of Social Science", place: "Yonsei University" },
+        { period: "2016–2018", role: "Chair, Department of Political Science and International Studies", place: "Yonsei University" },
+        { period: "2015–2018", role: "Associate Professor", place: "Yonsei University, Department of Political Science and International Studies" },
+        { period: "2014–2015", role: "Associate Professor", place: "Korea University, Division of International Studies" },
+        { period: "2012–2014", role: "Assistant Professor", place: "Korea University, Division of International Studies" },
         { period: "2007–2012", role: "Assistant Professor", place: "Texas A&M University, Department of Political Science" },
         { period: "2006–2007", role: "Visiting Predoctoral Scholar", place: "Columbia University, Department of Political Science" }
       ],
@@ -76,7 +79,7 @@ const content = {
   ko: {
     name: "황태희",
     nameKo: "Taehee Whang",
-    title: "교수 · 사회과학대학 부학장",
+    title: "교수",
     department: "정치외교학과",
     university: "연세대학교",
     email: "thwhang@yonsei.ac.kr",
@@ -87,23 +90,24 @@ const content = {
       cv: "CV"
     },
     hero: {
-      tagline: "국제관계론 · 경제제재 · 연구방법론 · 북한"
+      tagline: "국제정치 · 경제제재 · 연구방법론 · 북한과 통일"
     },
     about: {
       heading: "소개",
       bio: `연세대학교 정치외교학과 교수입니다.
-      주요 연구 분야는 국제정치경제로, 경제제재, 국제개발과 대외원조, 인권, 그리고 북한 문제에 집중합니다.
+      주요 연구 분야는 국제정치로, 경제제재, 국제개발과 대외원조, 인권, 그리고 북한 문제에 집중합니다.
       연구방법론 측면에서는 구조적 추정, 최대우도법, 게임이론, 자동화 텍스트 분석 등을 활용합니다.`,
-      bio2: `2007년 로체스터대학교에서 정치학 박사학위를 취득하였습니다.
-      연세대 부임 전에는 고려대학교와 텍사스A&amp;M 대학교(2007–2012)에서 교수직을 역임하였습니다.`
+      bio2: `2001년 뉴욕대학교에서 정치학 석사, 2007년 로체스터대학교에서 정치학 박사학위를 취득하였습니다.
+      연세대 부임 전에는 고려대학교와 텍사스A&amp;M 대학교(2007–2012)에서 교수직을 역임하였습니다.
+      2024년 1월부터 2025년 6월까지 연세대학교를 휴직하고 통일부 통일협력국장으로 재직하였습니다.`
     },
     research: {
       heading: "연구",
-      intro: "연구는 크게 세 가지 분야에 걸쳐 있습니다:",
+      intro: "주요 연구 분야는 다음과 같습니다:",
       areas: [
         {
-          title: "경제제재",
-          desc: "제재의 개시와 결과에 대한 구조적·전략적 분석, 제재의 국내정치, 강제적 협상."
+          title: "국제관계 및 경제제재",
+          desc: "제재의 개시와 결과에 대한 구조적·전략적 분석, 제재의 국내정치, 강제적 협상, 청중비용(audience costs)."
         },
         {
           title: "국제개발 및 대외원조",
@@ -130,10 +134,11 @@ const content = {
       download: "CV 다운로드 (PDF)",
       positions: [
         { period: "2018–현재", role: "교수 (정교수)", place: "연세대학교 정치외교학과" },
-        { period: "2018–현재", role: "사회과학대학 부학장", place: "연세대학교" },
+        { period: "2018–2020", role: "사회과학대학 부학장", place: "연세대학교" },
         { period: "2016–2018", role: "정치외교학과 학과장", place: "연세대학교" },
         { period: "2015–2018", role: "부교수", place: "연세대학교 정치외교학과" },
-        { period: "2014–2015", role: "부교수", place: "고려대학교 정치외교학과" },
+        { period: "2014–2015", role: "부교수", place: "고려대학교 국제학부" },
+        { period: "2012–2014", role: "조교수", place: "고려대학교 국제학부" },
         { period: "2007–2012", role: "조교수", place: "Texas A&M University 정치학과" },
         { period: "2006–2007", role: "방문 연구원", place: "Columbia University 정치학과" }
       ],

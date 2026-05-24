@@ -567,7 +567,7 @@ const publications = [
     type: "working",
     title: "Public Support for Environmental Aid: Evidence from a Conjoint Experiment in India",
     authors: "Elena V. McLean, Taehee Whang, and J. Yang",
-    journal: "Under Review",
+    journal: "R&R at Global Environmental Politics",
     volume: "", pages: "", pdf: null,
     tags: ["foreign aid", "environment", "experiment", "india", "conjoint"]
   }
